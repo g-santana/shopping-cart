@@ -1,7 +1,6 @@
 package com.navalia.shoppingcart.controller;
 
 import com.navalia.shoppingcart.dto.request.OrderRequest;
-import com.navalia.shoppingcart.dto.response.OrderResponse;
 import com.navalia.shoppingcart.exception.InvalidOrderException;
 import com.navalia.shoppingcart.exception.ItemNotInCartException;
 import com.navalia.shoppingcart.service.CartService;
