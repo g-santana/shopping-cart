@@ -138,6 +138,8 @@ public class CartServiceImpl implements CartService {
             totalPrice = items.stream().mapToDouble(i -> i.getItemData().getPrice() * i.getAmount()).sum();
         }
 
-        return totalPrice;
+        String formattedDoubleValue = String.format("%.2f", totalPrice).replace(',', '.');
+
+        return Double.parseDouble(formattedDoubleValue);
     }
 }
