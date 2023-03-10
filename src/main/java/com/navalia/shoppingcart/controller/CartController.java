@@ -22,7 +22,7 @@ public class CartController {
         this.cartService = cartService;
     }
 
-    @PostMapping("/add")
+    @PostMapping("/add_item")
     public ResponseEntity<Object> add(@RequestBody OrderRequest order) {
         try {
             return ResponseEntity.ok().body(cartService.addToCart(order));
@@ -35,7 +35,7 @@ public class CartController {
         }
     }
 
-    @DeleteMapping("/remove")
+    @DeleteMapping("/remove_item")
     public ResponseEntity<Object> remove(@RequestBody OrderRequest order) {
         try {
             return ResponseEntity.ok().body(cartService.removeFromCart(order));
@@ -58,8 +58,8 @@ public class CartController {
         }
     }
 
-    @GetMapping("/close")
-    public ResponseEntity<Object> close() {
+    @GetMapping("/close_order")
+    public ResponseEntity<Object> closeOrder() {
         try {
             return ResponseEntity.ok().body(cartService.closeOrder());
         } catch (Exception ex) {

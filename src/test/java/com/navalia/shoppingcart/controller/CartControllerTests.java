@@ -107,14 +107,14 @@ public class CartControllerTests {
         var orderRequest = OrderRequest.builder().itemId(1).amount(1).build();
 
         cartController.add(orderRequest);
-        var response = cartController.close();
+        var response = cartController.closeOrder();
         Assertions.assertEquals(200, response.getStatusCodeValue());
     }
 
     @Test
     void testCloseMethodInternalServerErrorResponse() throws Exception {
         Mockito.when(cartService.closeOrder()).thenThrow(NullPointerException.class);
-        var response = cartController.close();
+        var response = cartController.closeOrder();
         Assertions.assertEquals(500, response.getStatusCodeValue());
     }
 }
