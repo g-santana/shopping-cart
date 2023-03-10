@@ -2,7 +2,7 @@
 
 This project is the solution for a technical problem, presented as part of a selective process for a position as a back-end engineer. It follows an architecture similar to the typical MVC normally seen in Spring applications. It has both Controller and Service layers and also an Entity package, but it lacks a Repository layer because the app doesn't connect to any database and runs completely in the computer memory. There are peripheral packages in the application, such as constant (for Enums), dto (for Requests and Responses) and exception (for Exceptions), to keep the classes organized and where they should be.  
 
-To be able to run and analyze the application, you'll need to have both Java (11+) and Maven installed in your environment. It's also recommended the use of some IDE, but not mandatory. After having your environment all set up, run the following command on your terminal:
+To be able to run and analyze the application, you'll need to have both Java (11+) and Maven installed in your environment. It's also recommended the use of some IDE, but not mandatory. After having your environment all set up, download the repository and run the following command on your terminal, at the project root directory:
 
 ```
 mvn clean install
