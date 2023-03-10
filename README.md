@@ -4,7 +4,10 @@ This project is the solution for a technical problem, presented as part of a sel
 
 To be able to run and analyze the application, you'll need to have both Java (11+) and Maven installed in your environment. It's also recommended the use of some IDE, but not mandatory. After having your environment all set up, run the following command on your terminal:
 
-```mvn spring-boot:run```
+```
+mvn clean install
+mvn spring-boot:run
+```
 
 The app runs on port 5353 and the API has the following endpoints:
 
